@@ -25,10 +25,10 @@ export class ScreenComponentComponent implements OnInit {
     let configObj = null;
     let object1 = null;
     let lastChar = txt.charAt(txt.length - 1);
-    if(txt === "")
-    {
-      searchFieldConfig.forEach(obj => {obj.value = ''});
-      if(this.barText != "") this.barText = "";
+    if (txt === '') {
+      searchFieldConfig.forEach((obj) => {
+        obj.value = '';
+      });
       return;
     }
 
@@ -41,7 +41,10 @@ export class ScreenComponentComponent implements OnInit {
         }
       }
     } else {
-      searchFieldConfig[this.objIndex].value = txt.substr(this.symbolPos, (txt.length - this.symbolPos));
+      searchFieldConfig[this.objIndex].value = txt.substr(
+        this.symbolPos,
+        txt.length - this.symbolPos
+      );
     }
   }
 }
